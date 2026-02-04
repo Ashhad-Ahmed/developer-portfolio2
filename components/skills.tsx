@@ -44,7 +44,21 @@ import {
 } from "react-icons/md"
 import { BiCodeBlock } from "react-icons/bi"
 import { VscCode } from "react-icons/vsc"
+import { GiBearFace } from "react-icons/gi"
 import type { IconType } from "react-icons"
+import Image from "next/image"
+
+// Custom Zustand Icon Component
+const ZustandIcon: IconType = ({ className, style }) => (
+  <Image
+    src="/zustand-icon.svg"
+    alt="Zustand"
+    width={16}
+    height={16}
+    className={className}
+    style={style}
+  />
+)
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -118,6 +132,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "React Hooks", icon: SiReact, color: "#61DAFB" },
       { name: "Redux Toolkit", icon: SiRedux, color: "#764ABC" },
+      { name: "Zustand", icon: ZustandIcon, color: "#443E38" },
       { name: "useState", icon: BiCodeBlock, color: "#61DAFB" },
       { name: "Context API", icon: SiReact, color: "#61DAFB" },
     ],
@@ -127,7 +142,7 @@ const skillCategories: SkillCategory[] = [
     icon: GitBranch,
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },
-      { name: "GitHub", icon: SiGithub, color: "#181717" },
+      { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
       { name: "VS Code", icon: VscCode, color: "#007ACC" },
       { name: "Responsive Design", icon: MdDevices, color: "#00C853" },
     ],
@@ -146,6 +161,26 @@ const skillCategories: SkillCategory[] = [
 ]
 
 export function Skills() {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+  };
+
   return (
     <section id="skills" className="py-24">
       <motion.h2
@@ -168,23 +203,26 @@ export function Skills() {
         {skillCategories.map((category) => (
           <motion.div
             key={category.title}
-            className="group p-5 rounded-lg bg-secondary/30 border border-border hover:border-primary/30 transition-colors"
+            className="group p-5 rounded-lg bg-secondary/30 border border-border hover:border-primary/30 transition-all duration-300 ease-out"
             variants={itemVariants}
-            whileHover={{ scale: 1.02, borderColor: "hsl(var(--primary))" }}
+            whileHover={{ borderColor: "rgba(255, 255, 255, 0.4)" }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{ transformStyle: 'preserve-3d' }}
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-md bg-primary/10 text-primary">
-                {category.icon && <category.icon className="w-4 h-4" />}
+            <div className="flex items-center gap-3 mb-5">
+              <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                {category.icon && <category.icon className="w-5 h-5" />}
               </div>
-              <h3 className="font-medium text-foreground">{category.title}</h3>
+              <h3 className="text-lg font-semibold text-foreground tracking-tight">{category.title}</h3>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2.5">
               {category.skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground flex items-center gap-1.5"
+                  className="text-sm px-3 py-1.5 rounded-full bg-muted text-muted-foreground flex items-center gap-2 font-medium"
                 >
-                  <skill.icon className="w-3 h-3" style={{ color: skill.color }} />
+                  <skill.icon className="w-4 h-4" style={{ color: skill.color }} />
                   {skill.name}
                 </span>
               ))}

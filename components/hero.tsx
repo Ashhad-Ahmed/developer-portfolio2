@@ -78,6 +78,26 @@ function TypewriterTitle() {
 }
 
 export function Hero() {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -15;
+    const rotateY = ((x - centerX) / centerX) * 15;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+  };
+
   return (
     <section className="min-h-screen flex flex-col justify-center py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
@@ -99,9 +119,11 @@ export function Hero() {
         animate="visible"
       >
         <motion.div
-          className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/30"
+          className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/30 transition-all duration-300 ease-out"
           variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          style={{ transformStyle: 'preserve-3d' }}
         >
           <Image
             src="/profile.jpg"

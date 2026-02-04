@@ -1,0 +1,21 @@
+<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="zustand-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#443E38;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5C5349;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="90" cy="90" r="85" fill="url(#zustand-gradient)"/>
+  <circle cx="90" cy="100" r="60" fill="#3D3935"/>
+  <circle cx="70" cy="85" r="8" fill="#2D2925"/>
+  <circle cx="110" cy="85" r="8" fill="#2D2925"/>
+  <ellipse cx="50" cy="50" rx="18" ry="22" fill="#8B7355"/>
+  <ellipse cx="130" cy="50" rx="18" ry="22" fill="#8B7355"/>
+  <ellipse cx="50" cy="48" rx="12" ry="16" fill="#5C5349"/>
+  <ellipse cx="130" cy="48" rx="12" ry="16" fill="#5C5349"/>
+  <circle cx="90" cy="100" r="12" fill="#6B6157"/>
+  <ellipse cx="90" cy="105" rx="3" ry="5" fill="#FF6B35"/>
+  <path d="M 75 115 Q 90 125 105 115" stroke="#2D2925" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="55" cy="60" r="6" fill="#D4A59A"/>
+  <circle cx="125" cy="60" r="6" fill="#D4A59A"/>
+</svg>

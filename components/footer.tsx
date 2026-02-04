@@ -54,26 +54,6 @@ export function Footer() {
 
         {/* Footer Info */}
         <div className="text-center space-y-4">
-          <p className="text-muted-foreground text-sm">
-            Built with{" "}
-            <a
-              href="https://nextjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Next.js
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://tailwindcss.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Tailwind CSS
-            </a>
-          </p>
           <p className="text-muted-foreground text-xs">
             © {new Date().getFullYear()} Ashhad Ahmed Siddiqi. All rights reserved.
           </p>

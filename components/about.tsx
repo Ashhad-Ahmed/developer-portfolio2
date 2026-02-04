@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Download } from "lucide-react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,6 +63,19 @@ export function About() {
           passionate about staying current with the latest mobile development
           trends and continuously improving my skills.
         </motion.p>
+
+        <motion.div variants={itemVariants} className="pt-4">
+          <motion.a
+            href="/resume.pdf"
+            download="Ashhad_Ahmed_Resume.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Download className="w-5 h-5" />
+            Download My Resume
+          </motion.a>
+        </motion.div>
       </motion.div>
     </section>
   )
