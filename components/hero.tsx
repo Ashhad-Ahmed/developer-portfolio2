@@ -28,6 +28,7 @@ const itemVariants = {
 
 const titles = [
   "React Native Developer",
+  "Full Stack Developer",
   "Mobile App Developer",
   "Cross Platform Developer",
   "Frontend Engineer",

@@ -25,6 +25,10 @@ import {
   SiGithub,
   SiMysql,
   SiMongodb,
+  SiNodedotjs,
+  SiExpress,
+  SiPostman,
+  SiGoogle,
 } from "react-icons/si"
 import {
   IoNavigate,
@@ -118,9 +122,11 @@ const skillCategories: SkillCategory[] = [
     title: "Backend & APIs",
     icon: Database,
     skills: [
-      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
-      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
       { name: "Google Authentication", icon: IoShieldCheckmark, color: "#4285F4" },
       { name: "REST API Integration", icon: MdApi, color: "#00D9FF" },
       { name: "Redux Toolkit", icon: SiRedux, color: "#764ABC" },
@@ -144,6 +150,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
       { name: "VS Code", icon: VscCode, color: "#007ACC" },
+      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+      { name: "Google Workspace", icon: SiGoogle, color: "#4285F4" },
       { name: "Responsive Design", icon: MdDevices, color: "#00C853" },
     ],
   },

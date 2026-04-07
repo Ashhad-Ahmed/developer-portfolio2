@@ -34,6 +34,14 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    period: "Feb 2026 — Present",
+    title: "Assoc. Full Stack Developer",
+    company: "Proxima",
+    description:
+      "Architected and developed a comprehensive mobile application from scratch, enabling seamless employee attendance tracking. Designed and implemented robust RESTful APIs utilizing Node.js and Express.js, while using a MySQL database for the secure storage and management of all employee records and attendance data. Demonstrated full-stack capability by also developing the CMI web application, where I overhauled the UI/UX and built a fully functional administrative dashboard. Integrated Chart.js to incorporate dynamic, interactive data visualizations for advanced analytics.",
+    technologies: ["React Native", "Node.js", "Express.js", "MySQL", "Chart.js"],
+  },
+  {
     period: "Jul 2025 — Nov 2025",
     title: "Front-End Developer (Intern)",
     company: "Fortify",
