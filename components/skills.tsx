@@ -29,6 +29,7 @@ import {
   SiExpress,
   SiPostman,
   SiGoogle,
+  SiChartdotjs,
 } from "react-icons/si"
 import {
   IoNavigate,
@@ -116,6 +117,7 @@ const skillCategories: SkillCategory[] = [
       { name: "CSS", icon: SiCss3, color: "#1572B6" },
       { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Chart.js", icon: SiChartdotjs, color: "#FF6384" },
     ],
   },
   {
