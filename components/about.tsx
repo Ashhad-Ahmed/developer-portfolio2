@@ -44,7 +44,7 @@ export function About() {
         viewport={{ once: true }}
       >
         <motion.p variants={itemVariants}>
-          I&apos;m a Frontend Developer specializing in React Native, with a strong focus on building scalable mobile applications and modern web interfaces.
+          I&apos;m a Full Stack Developer specializing in React Native, with a strong focus on building scalable mobile applications and modern web interfaces.
         </motion.p>
         <motion.p variants={itemVariants}>
           I enjoy crafting pixel-perfect UI components, optimizing performance, and delivering seamless experiences across mobile and web platforms. My daily toolkit includes{" "}
