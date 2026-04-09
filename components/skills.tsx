@@ -30,6 +30,8 @@ import {
   SiPostman,
   SiGoogle,
   SiChartdotjs,
+  SiAndroidstudio,
+  SiXcode,
 } from "react-icons/si"
 import {
   IoNavigate,
@@ -152,6 +154,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
       { name: "VS Code", icon: VscCode, color: "#007ACC" },
+      { name: "Android Studio", icon: SiAndroidstudio, color: "#3DDC84" },
+      { name: "Xcode", icon: SiXcode, color: "#157EFB" },
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "Google Workspace", icon: SiGoogle, color: "#4285F4" },
       { name: "Responsive Design", icon: MdDevices, color: "#00C853" },
